@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+  let physicsGrade;
+  let chemistryGrade;
+  let biologyGrade;
+  let physics;
+  let chemistry;
+  let biology;
+  let gp;
+  let gpa;
+
+  function calculateGrade() {
+      physicsGrade = document.getElementById("physics").value;
+      chemistryGrade = document.getElementById("chemistry").value;
+      biologyGrade = document.getElementById("biology").value;
+      physics = parseInt(physicsGrade);
+      chemistry = parseInt(chemistryGrade);
+      biology = parseInt(biologyGrade);
+      gp = (physics + chemistry + biology);
+      gpa = gp/3;
+      document.getElementById("sum").innerHTML = `<p id="sum"> Tổng điểm: ${gp} </p>`;
+      document.getElementById("average").innerHTML = `<p id="average"> Điểm trung bình: ${gpa} </p>`;
+  }
+</script>
+<label for="physics">Vật Lý</label>
+<input id="physics" type="text">
+<label for="chemistry">Hóa Học</label>
+<input id="chemistry" type="text">
+<label for="biology">Sinh Học</label>
+<input id="biology" type="text">
+<button type="button" onclick="calculateGrade()">Tính điểm</button>
+<p id="sum"> Tổng điểm: </p>
+<p id ="average"> Điểm trung bình: </p>
+
+
+</body>
+</html>

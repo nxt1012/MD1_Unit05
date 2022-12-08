@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+</head>
+<body>
+<form id="simpleCalculator">
+    <input id="value1" type="text">
+    <input id="value2" type="text">
+    <button type="button" onclick="add()">Addition (+)</button>
+    <button type="button" onclick="sub()">Subtraction (-)</button>
+    <button type="button" onclick="multi()">Multiplication (x)</button>
+    <button type="button" onclick="div()">Division (/)</button>
+</form>
+<p id="result">Result: </p>
+<script>
+    let inputValue1;
+    let inputValue2;
+    let value1;
+    let value2;
+    let addition;
+    let subtraction;
+    let multiplication;
+    let division;
+    console.log(inputValue1);
+    console.log(typeof(inputValue1))
+    console.log(inputValue2);
+    console.log(value1)
+    console.log(value2)
+    console.log(addition, multiplication, subtraction, division)
+    function regerateValue() {
+        inputValue1 = document.getElementById("value1").value;
+        inputValue2 =  document.getElementById("value2").value;
+        value1 = parseInt(inputValue1);
+        value2 = parseInt(inputValue2);
+    }
+    function add(){
+        regerateValue();
+        addition = value1 + value2;
+        document.getElementById("result").innerHTML = `<p id="result">Result Addition: ${addition}</p>`;
+    }
+
+    function sub(){
+        regerateValue();
+        subtraction = value1 - value2;
+        document.getElementById("result").innerHTML = `<p id="result">Result Subtraction: ${subtraction}</p>`;
+    }
+
+    function multi(){
+        regerateValue();
+        multiplication = value1 * value2;
+        document.getElementById("result").innerHTML = `<p id="result">Result Multiplication: ${multiplication}</p>`;
+    }
+
+    function div(){
+        regerateValue();
+        division = value1 / value2;
+        document.getElementById("result").innerHTML = `<p id="result">Result Division: ${division}</p>`;
+    }
+</script>
+</body>
+</html>
